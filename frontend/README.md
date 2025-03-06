@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lead Management Frontend
 
-## Getting Started
+A modern React application built with Next.js, Redux Toolkit Query, and Tailwind CSS for managing leads.
 
-First, run the development server:
+## Prerequisites
 
+Before running this project, make sure you have the following installed:
+- Node.js (v14 or higher)
+- npm (usually comes with Node.js)
+
+## Installation
+
+1. Clone the repository and navigate to the frontend directory:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Mekdeskebede/lead-management-assessment.git
+cd frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Running the Application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Development Mode
+To run the application in development mode with hot-reload:
+```bash
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Production Mode
+Build the application:
+```bash
+npm run build
+```
+
+Start the production server:
+```bash
+npm start
+```
+
+## Features
+
+- View all leads in a responsive table
+- Add new leads with form validation
+- Real-time updates using RTK Query
+- Modern dark theme UI
+- Responsive design for all screen sizes
+- Status indicators with color coding
+
+## Project Structure
+
+```
+frontend/
+├── src/
+│   ├── app/
+│   │   ├── page.js
+│   │   ├── add/
+│   │   │   └── page.js
+│   │   ├── layout.js
+│   │   └── globals.css
+│   ├── components/
+│   │   ├── LeadForm.js
+│   │   ├── LeadList.js
+│   │   ├── Navigation.js
+│   │   └── Providers.js
+│   ├── services/
+│   │   └── leadApi.js
+│   └── store/
+│       └── store.js
+├── .env.local
+├── package.json
+└── README.md
+```
+
+## Technology Stack
+
+- **Framework**: Next.js 14
+- **State Management**: Redux Toolkit with RTK Query
+- **Styling**: Tailwind CSS
+- **Font**: Geist Sans & Geist Mono
+- **HTTP Client**: Built-in RTK Query fetch
+
+## Components
+
+### LeadList
+- Displays all leads in a responsive table
+- Color-coded status indicators
+- Loading and error states
+
+### LeadForm
+- Form for adding new leads
+- Input validation
+- Loading state during submission
+- Success/error handling
+
+### Navigation
+- Responsive navigation bar
+- Active route indication
+- Modern dark theme design
+
+## API Integration
+
+The application uses RTK Query for API calls with the following endpoints:
+
+```javascript
+GET /leads    // Fetch all leads
+POST /leads   // Create a new lead
+```
+
+## Development
+
+To contribute to this project:
+
+1. Create a new branch for your feature
+2. Make your changes
+3. Test your changes
+4. Submit a pull request
+
+## Dependencies
+
+- next: React framework
+- @reduxjs/toolkit: State management
+- react-redux: React bindings for Redux
+- tailwindcss: Utility-first CSS framework
+- @tailwindcss/forms: Form styling utilities
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ISC
