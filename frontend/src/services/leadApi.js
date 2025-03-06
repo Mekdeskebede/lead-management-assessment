@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const leadApi = createApi({
   reducerPath: 'leadApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://lead-management-assessment.onrender.com/' }),
   tagTypes: ['Lead'],
   endpoints: (builder) => ({
     getLeads: builder.query({
