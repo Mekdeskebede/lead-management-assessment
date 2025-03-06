@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const leadRoutes = require('./routes/leadRoutes');
+const leadRoutes = require('./routes/lead.routes');
 require('dotenv').config();
 const cors = require("cors");
 
