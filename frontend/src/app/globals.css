@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712; /* Updated to match slate-950 */
+}
+
+body {
+  background: var(--background);
+  min-height: 100vh;
+  color: #f1f5f9; /* slate-100 for better contrast */
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b; /* slate-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569; /* slate-600 */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* slate-500 */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #1e293b;
+}
+
+
